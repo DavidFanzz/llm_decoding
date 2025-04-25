@@ -112,7 +112,7 @@ class CommonsenseQA(Task):
             pattern = r'\(([abcde])\)'
             matches = re.findall(pattern, completion)
             if matches:
-                result = matches[-1].upper()
+                answer_key = matches[-1].upper()
             else:
                 print("=" * 25 + "No matchde Result" + "=" * 25)
                 print(generation[0])
